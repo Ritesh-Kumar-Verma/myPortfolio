@@ -1,0 +1,79 @@
+.info{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin:0 50px 0 50px;
+    position: fixed;
+    
+}
+@media (max-width:1024px) {
+    .info{
+        position: static;
+    }
+}
+.active{
+    color: #E2E8F0;
+}
+
+.my-name{
+    font-size: 30px;
+    color: #E2E8F0;
+
+}
+
+.title{
+    font-size: 20px;
+    color: #E2E8F0;
+
+
+}
+.about{
+    margin-top: 10px;
+    color: #94A3B8;
+    width: 320px;
+}
+
+
+.options{
+    margin-top: 25px;
+    
+}
+.options .option-items{
+        
+}
+
+.middle-line{
+
+}
+
+.options .option-items:hover{
+    color: rgb(100, 255, 218);
+    transform-origin: left center;
+    transition: transform 0.2s ease;
+    cursor: pointer;
+    transform: scale(1.2);
+}
+
+.contacts{
+    margin-top: 100px;
+    display: flex;
+    gap: 50px;
+}
+
+.contacts img{
+    height: 30px;
+}
+.contacts img:hover{
+    cursor: pointer;
+    transform: scale(1.2);
+}
+
+@media(max-width:1024px) {
+    .about ,.options , .contacts{
+        margin-top: 15px;
+    }
+    .info{
+        align-items: start;
+        
+    }
+}

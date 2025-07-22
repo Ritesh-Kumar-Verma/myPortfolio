@@ -1,0 +1,32 @@
+.main-window {
+  z-index: 1;
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  padding-top: 40px;
+}
+.header {
+  position: sticky;
+  top: 0;
+}
+.left {
+  position: sticky;
+  top: 0;
+  overflow-y: auto;
+}
+.scroll-window {
+    height: fit-content;
+}
+
+@media (max-width: 1024px) {
+  .main-window {
+    grid-template-columns: 1fr;
+    padding-top: 10px;
+  }
+  .header {
+    position: static;
+  }
+  .left {
+    position: static;
+    height: fit-content;
+  }
+}

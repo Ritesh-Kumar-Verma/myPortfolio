@@ -1,0 +1,14 @@
+
+.cursor-light {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 0;
+  background: radial-gradient(
+  80vh circle at var(--x, 50%) var(--y, 50%),
+  rgba(12, 104, 179, 0.2),
+  transparent 80%
+);
+
+  transition: background 0.1s ease;
+}
