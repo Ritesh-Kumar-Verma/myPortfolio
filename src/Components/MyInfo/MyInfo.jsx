@@ -20,13 +20,13 @@ const MyInfo = () => {
           <div className="option-items">Skills</div>
         </div>
         <div className="contacts">
-          <a href="https://github.com/Ritesh-Kumar-Verma" target="_blank">
+          <a href="https://github.com/Ritesh-Kumar-Verma" target="_blank" rel="noopener noreferrer">
             <img src={assets.git} alt="" />
           </a>
-          <a href="" target="_blank">              {/*add instagram link*/}
+          <a href="" target="_blank" rel="noopener noreferrer">              {/*add instagram link*/}
             <img src={assets.instagram} alt="" />
           </a>
-          <a href="www.linkedin.com/in/ritesh-verma-512468244" target="_blank">
+          <a href="https://www.linkedin.com/in/ritesh-verma-512468244" target="_blank" rel="noopener noreferrer">
             <img src={assets.linkedin} alt="" />
           </a>
         </div>

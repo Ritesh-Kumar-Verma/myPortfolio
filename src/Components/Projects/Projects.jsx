@@ -51,7 +51,7 @@ const Projects = () => {
         return (
           <div
             className="project-card"
-            onClick={() => window.open(data.url, "_blank")}
+            onClick={() => window.open(data.url, '_blank', 'noopener,noreferrer')}
           >
             <div className="sample">
               <img src={data.sample} alt="" />
