@@ -1,0 +1,110 @@
+.contact-section {
+  padding: 60px 20px;
+  max-width: 700px;
+  margin: 30px auto;
+  color: white;
+  text-align: center;
+}
+
+.contact-section h2 {
+  color: #00ffff;
+  font-size: 28px;
+  margin-bottom: 10px;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-top: 30px;
+}
+
+.contact-form input,
+.contact-form textarea {
+  padding: 12px;
+  border: none;
+  border-radius: 8px;
+  background-color: #102a43;
+  color: white;
+  font-size: 16px;
+}
+
+.contact-form button {
+  background-color: #00ffff;
+  color: #0b2239;
+  padding: 12px;
+  border: none;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.contact-form button:hover {
+  background-color: #00cccc;
+}
+
+.social-links {
+  margin-top: 30px;
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.social-links a {
+  color: #00ffff;
+  text-decoration: none;
+  font-size: 16px;
+}
+.social-links a img {
+  height: 30px;
+}
+.social-links a:hover {
+  text-decoration: underline;
+}
+.gmail-tooltip,
+.git-tooltip,
+.linkedin-tooltip {
+  display: none;
+  position: fixed;
+  width: 60px;
+  font-size: 10px;
+  /* background-color: aqua; */
+  color: #00ffff;
+}
+.gmail:hover .gmail-tooltip {
+  display: block;
+}
+.git:hover .git-tooltip {
+  display: block;
+}
+.linkedin:hover .linkedin-tooltip {
+  display: block;
+}
+.popup {
+  position: fixed;
+  bottom: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: rgba(0, 255, 255, 0.1);
+  color: #ffffff;
+  border: 1px solid #00ffff;
+  padding: 12px 20px;
+  border-radius: 8px;
+  backdrop-filter: blur(8px);
+  font-size: 14px;
+  font-weight: 500;
+  box-shadow: 0 0 10px rgba(0, 255, 255, 0.5);
+  z-index: 1000;
+  animation: fadein 0.5s, fadeout 0.5s 1.5s;
+}
+@keyframes fadein {
+  from { opacity: 0; transform: translateX(-50%) translateY(20px); }
+  to { opacity: 1; transform: translateX(-50%) translateY(0); }
+}
+
+@keyframes fadeout {
+  from { opacity: 1; transform: translateX(-50%) translateY(0); }
+  to { opacity: 0; transform: translateX(-50%) translateY(20px); }
+}

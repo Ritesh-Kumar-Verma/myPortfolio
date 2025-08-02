@@ -1,10 +1,10 @@
 import React from "react";
 import "./Header.css";
 const Header = ({activeTab,setActiveTab}) => {
-  const headerItem = ["Home", "Projects", "About", "Contact"];
+  const headerItem = ["Home", "Projects", "Contact"];
 
 
-  //need to set onclick for it
+  
 
 
 

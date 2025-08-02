@@ -5,6 +5,7 @@ import expenseTracker from './Expense-Tracker.png'
 import weatherify from './Weatherify.png'
 import mapify from './Mapify.png'
 import youtube from './Youtube_Clone.png'
+import gmail from './gmail.svg'
 export const assets = {
     git,
     instagram,
@@ -12,5 +13,7 @@ export const assets = {
     expenseTracker,
     weatherify,
     mapify,
-    youtube
+    youtube,
+    gmail
+
 }
