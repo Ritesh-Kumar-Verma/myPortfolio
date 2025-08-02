@@ -1,0 +1,17 @@
+.sub-window{
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    /* overflow: auto; */
+
+
+    position: relative;
+    top: 80px;
+}
+
+
+@media(max-width:1024px){
+    .sub-window{
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+}
