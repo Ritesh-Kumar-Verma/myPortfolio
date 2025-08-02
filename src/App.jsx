@@ -4,7 +4,7 @@ import Header from './Components/Header/Header'
 import CursorLight from './Components/CursorLight/CursorLight'
 import Projects from './Components/Projects/Projects'
 import Home from './Components/Home/Home'
-import About from './Components/About/About'
+import AboutTab from './Components/AboutTab/AboutTab'
 
 
 const App = () => {
@@ -12,7 +12,7 @@ const App = () => {
   const tab= {
     "Home":<Home  activeTab={activeTab} setActiveTab={setActiveTab} />,
     "Projects": <Projects/>,
-    "About": <About/>
+    "About": <AboutTab/>
   }
   
   

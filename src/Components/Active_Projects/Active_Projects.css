@@ -4,15 +4,16 @@
   gap: 10px;
   justify-content: center;
   align-items: center;
-  margin: 40px 40px 40px 40px;
-  background: rgba(255, 255, 255, 0.05);
-  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
-  border: 1px solid rgba(255, 255, 255, 0.18);
-  color: #e2e8f0;
-  transition: transform 0.3s ease;
-  padding-bottom: 30px;
+
+  padding: 0 0 10px 0 ;
+  max-width: 90%;
+  margin: 30px auto;
+  background-color: #0b2239; 
+  color: #ffffff;
+  border-radius: 16px;
+  box-shadow: 0 8px 24px rgba(0, 255, 255, 0.1);
+  border: 1px solid rgba(0, 255, 255, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 
 }
 .project-card {
@@ -29,9 +30,8 @@
   background-color: rgba(13, 25, 44, 0.7);
   border-radius: 6px;
 }
-.project-card:hover .sample img {
-  border: 2px solid rgb(116, 119, 138);
-}
+
+
 .project-card:hover .project-title {
   color: rgb(100, 255, 218);
 }

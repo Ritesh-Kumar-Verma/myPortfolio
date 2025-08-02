@@ -1,7 +1,27 @@
 .about-me{
-    margin: 30px;
     color: #94a3b8;
 }
+
+.about-me {
+  max-width: 700px;
+  margin: 30px auto;
+  padding: 30px 40px;
+  background-color: #0b2239; 
+  color: #ffffff;
+  border-radius: 16px;
+  box-shadow: 0 8px 24px rgba(0, 255, 255, 0.1);
+  border: 1px solid rgba(0, 255, 255, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.about-me:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 32px rgba(0, 255, 255, 0.15);
+}
+
+
+
+
 .about-me-paragraph{
     font-size: 18px;
     padding-bottom: 15px;
