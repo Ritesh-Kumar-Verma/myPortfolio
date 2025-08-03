@@ -20,7 +20,7 @@ const Contact = () => {
       <h2>Contact Me</h2>
       <p>I'm open to opportunities and collaborations. Drop me a message!</p>
 
-      <form className="contact-form" action="">
+      <form className="contact-form" action="https://formsubmit.co/6f5787def7a076f242eb41003b14188e" method="POST">
         <input type="text" name="name" placeholder="Your Name" required />
         <input type="email" name="email" placeholder="Your Email" required />
         <textarea
