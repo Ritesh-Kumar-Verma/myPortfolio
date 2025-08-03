@@ -5,7 +5,7 @@ const Contact = () => {
     const [showPopup,setShowPopup] = useState(false)
 
 
-    const myGmail = "ritesh782002@gmail.com"
+    const myGmail = "ritesh782002@outlook.com"
     const copyGmailToClipboard = ()=>{
         navigator.clipboard.writeText(myGmail).then(()=>{
             setShowPopup(true)
