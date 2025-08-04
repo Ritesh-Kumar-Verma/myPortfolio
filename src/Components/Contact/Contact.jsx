@@ -30,6 +30,8 @@ const Contact = () => {
           required
         ></textarea>
         <button type="submit">Send Message</button>
+        <input type="hidden" name="_next" value="https://Ritesh-Kumar-Verma.github.io/myPortfolio" />
+
       </form>
 
       <div className="social-links">
