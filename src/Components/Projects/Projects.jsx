@@ -11,7 +11,7 @@ const Projects = () => {
     {
       status: "Live",
       title: "Weatherify",
-      tech: ["React", "JavaScript", "Weather API"],
+      tech: ["React", "JavaScript", "OpenWeatherMap API"],
       link: "https://ritesh-kumar-verma.github.io/weatherify/",
     },
     {
