@@ -2,18 +2,8 @@ import React, { useState } from "react";
 import "./Contact.css";
 import { assets } from "../../assets/assets";
 const Contact = () => {
-    const [showPopup,setShowPopup] = useState(false)
 
 
-    const myGmail = "ritesh782002@outlook.com"
-    const copyGmailToClipboard = ()=>{
-        navigator.clipboard.writeText(myGmail).then(()=>{
-            setShowPopup(true)
-            setTimeout(()=>setShowPopup(false),2000)
-        }).catch((error)=>{
-            console.error("Failed To Copy " , error)
-        })
-    }
 
   return (
     <section className="contact-section">
@@ -35,9 +25,7 @@ const Contact = () => {
       </form>
 
       <div className="social-links">
-        <a className="gmail" href="#" onClick={copyGmailToClipboard}><img src={assets.gmail} alt="" />
-        <div className="gmail-tooltip">Click To Copy Gmail</div>
-        </a>
+        
         <a className="git"
           href="https://github.com/Ritesh-Kumar-Verma"
           target="_blank"
@@ -55,7 +43,6 @@ const Contact = () => {
           <div className="linkedin-tooltip">LinkedIn</div>
         </a>
       </div>
-      {showPopup && <div className="popup">Gmail Copied TO Clipboard</div>}
     </section>
   );
 };
