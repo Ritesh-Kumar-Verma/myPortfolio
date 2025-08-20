@@ -3,48 +3,42 @@ import "./Projects.css";
 const Projects = () => {
   const projectList = [
     {
+      status:"Live",
+      title : "Mapify",
+      tech:["React" , "Spring Boot", "PostgreSQL","Render"],
+      link:"https://ritesh-kumar-verma.github.io/Mapify/"
+    },
+    {
       status: "Live",
       title: "Expense Tracker",
       tech: ["React", "JavaScript"],
-      link: "https://ritesh-kumar-verma.github.io/Expense-Tracker/",
+      link: "https://ritesh-kumar-verma.github.io/Expense-Tracker/"
     },
     {
       status: "Live",
       title: "Weatherify",
       tech: ["React", "JavaScript", "OpenWeatherMap API"],
-      link: "https://ritesh-kumar-verma.github.io/weatherify/",
+      link: "https://ritesh-kumar-verma.github.io/weatherify/"
     },
     {
       status: "Live",
       title: "Youtube Clone",
       tech: ["JavaScript", "HTML", "CSS"],
-      link: "https://ritesh-kumar-verma.github.io/Youtube/",
+      link: "https://ritesh-kumar-verma.github.io/Youtube/"
     },
     
     {
       status: "Not Live(Repo)",
       title: "Todo List",
       tech: ["JavaScript", "HTML", "CSS"],
-      link: "https://github.com/Ritesh-Kumar-Verma/Todo-List.git",
+      link: "https://github.com/Ritesh-Kumar-Verma/Todo-List.git"
     },
     {
       status: "Not Live(Repo)",
       title: "Rock-Paper-Scissors",
       tech: ["JavaScript", "HTML", "CSS"],
-      link: "https://github.com/Ritesh-Kumar-Verma/Rock-Paper-Scissors.git",
+      link: "https://github.com/Ritesh-Kumar-Verma/Rock-Paper-Scissors.git"
     }
-    // {
-    //   status: "Git",
-    //   title: "Youtube Clone",
-    //   tech: ["JavaScript", "HTML", "CSS"],
-    //   link: "https://ritesh-kumar-verma.github.io/Youtube/",
-    // },
-    // {
-    //   status: "Git",
-    //   title: "Youtube Clone",
-    //   tech: ["JavaScript", "HTML", "CSS"],
-    //   link: "https://ritesh-kumar-verma.github.io/Youtube/",
-    // }
     
   ];
 
@@ -66,10 +60,9 @@ const Projects = () => {
             <React.Fragment key={index}>
               <div
                 className={`cell-item ${
-                  data.status == "Live" ? "live-status" : ""
+                  data.status == "Live" ? "live-status" : "not-live"
                 }`}
               >
-                {" "}
                 <span className="dot"></span>
                 {data.status}
               </div>

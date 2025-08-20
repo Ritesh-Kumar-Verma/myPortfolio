@@ -65,6 +65,7 @@
 .summary {
   text-align: justify;
   color: #94a3b8;
+  white-space: pre-line;
 }
 
 .active-projects-card:hover .project-card {
