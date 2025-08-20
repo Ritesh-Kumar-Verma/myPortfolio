@@ -9,6 +9,7 @@ const Skills = () => {
   <h2>Skills</h2>
   <div className="skills-grid">
     <span className="skill-tag">React.js</span>
+    <span className='skill-tag'>Spring Boot</span>
     <span className="skill-tag">JavaScript</span>
     <span className="skill-tag">HTML</span>
     <span className="skill-tag">CSS</span>
