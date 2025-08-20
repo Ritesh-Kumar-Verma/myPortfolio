@@ -13,8 +13,7 @@ const Info = ({optionItems,activeOption,setActiveOption}) => {
         <div className="my-name">Ritesh Kumar Verma</div>
         <div className="title">Front End Engineer</div>
         <div className="about">
-          Front-end developer learning React.js and building responsive web
-          interfaces.
+          Full-Stack developer learning <span>React.js</span> and <span> Spring Boot </span> and building responsive web interfaces.
         </div>
 
         <div className="options">
