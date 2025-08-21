@@ -11,7 +11,7 @@ const Info = ({optionItems,activeOption,setActiveOption}) => {
     <div className="info">
       <div>
         <div className="my-name">Ritesh Kumar Verma</div>
-        <div className="title">Front End Engineer</div>
+        <div className="title">Full-Stack Engineer</div>
         <div className="about">
           Full-Stack developer learning <span>React.js</span> and <span> Spring Boot </span> and building responsive web interfaces.
         </div>
