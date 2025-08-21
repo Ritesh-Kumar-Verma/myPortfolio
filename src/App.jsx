@@ -11,7 +11,7 @@ const App = () => {
   const [activeTab , setActiveTab] = useState("Home")
   const tab= {
     "Home":<Home  activeTab={activeTab} setActiveTab={setActiveTab} />,
-    "Projects": <Projects/>,
+    "Projects": <Projects setActiveTab={setActiveTab}/>,
     "Contact" : <Contact/>
     
   }

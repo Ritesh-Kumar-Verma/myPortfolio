@@ -1,6 +1,6 @@
 import React from "react";
 import "./Projects.css";
-const Projects = () => {
+const Projects = ({setActiveTab}) => {
   const projectList = [
     {
       status: "Live",
@@ -44,7 +44,7 @@ const Projects = () => {
   return (
     <div className="projects-window">
       <div className="back-to-home-tab">
-        <div className="home-button-wrapper" >
+        <div className="home-button-wrapper" onClick={()=>setActiveTab("Home")} >
           <span className="left-arrow">&larr;</span>{" "}
           <div className="home-button">Home</div>
         </div>
