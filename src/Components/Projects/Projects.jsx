@@ -3,49 +3,51 @@ import "./Projects.css";
 const Projects = () => {
   const projectList = [
     {
-      status:"Live",
-      title : "Mapify",
-      tech:["React" , "Spring Boot", "PostgreSQL","Render"],
-      link:"https://ritesh-kumar-verma.github.io/Mapify/"
+      status: "Live",
+      title: "Mapify",
+      tech: ["React", "Spring Boot", "PostgreSQL", "Render"],
+      link: "https://ritesh-kumar-verma.github.io/Mapify/",
     },
     {
       status: "Live",
       title: "Expense Tracker",
       tech: ["React", "JavaScript"],
-      link: "https://ritesh-kumar-verma.github.io/Expense-Tracker/"
+      link: "https://ritesh-kumar-verma.github.io/Expense-Tracker/",
     },
     {
       status: "Live",
       title: "Weatherify",
       tech: ["React", "JavaScript", "OpenWeatherMap API"],
-      link: "https://ritesh-kumar-verma.github.io/weatherify/"
+      link: "https://ritesh-kumar-verma.github.io/weatherify/",
     },
     {
       status: "Live",
       title: "Youtube Clone",
       tech: ["JavaScript", "HTML", "CSS"],
-      link: "https://ritesh-kumar-verma.github.io/Youtube/"
+      link: "https://ritesh-kumar-verma.github.io/Youtube/",
     },
-    
+
     {
       status: "Not Live(Repo)",
       title: "Todo List",
       tech: ["JavaScript", "HTML", "CSS"],
-      link: "https://github.com/Ritesh-Kumar-Verma/Todo-List.git"
+      link: "https://github.com/Ritesh-Kumar-Verma/Todo-List.git",
     },
     {
       status: "Not Live(Repo)",
       title: "Rock-Paper-Scissors",
       tech: ["JavaScript", "HTML", "CSS"],
-      link: "https://github.com/Ritesh-Kumar-Verma/Rock-Paper-Scissors.git"
-    }
-    
+      link: "https://github.com/Ritesh-Kumar-Verma/Rock-Paper-Scissors.git",
+    },
   ];
 
   return (
     <div className="projects-window">
       <div className="back-to-home-tab">
-        <span className="left-arrow">&larr;</span> Home
+        <div className="home-button-wrapper" >
+          <span className="left-arrow">&larr;</span>{" "}
+          <div className="home-button">Home</div>
+        </div>
       </div>
       <div className="table-title">All Projects</div>
 
@@ -77,12 +79,13 @@ const Projects = () => {
                 })}
               </div>
               <div className="cell-item">
-                <a href={data.link} target="_blank" rel="noopener noreferrer">Open<span className="arrow">↗</span></a>
+                <a href={data.link} target="_blank" rel="noopener noreferrer">
+                  Open<span className="arrow">↗</span>
+                </a>
               </div>
             </React.Fragment>
           );
         })}
-        
       </div>
     </div>
   );

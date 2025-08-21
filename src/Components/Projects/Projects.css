@@ -9,15 +9,21 @@
 }
 .back-to-home-tab{
     color: aqua;
-    cursor: pointer;
     width: 100%;
+}
+.home-button{
+  display: inline;
 }
 .left-arrow{
     display: inline-block;
     transition: transform 0.3s ease;
     
 }
-.back-to-home-tab:hover .left-arrow{
+.home-button-wrapper{
+  width: fit-content;
+  cursor: pointer;
+}
+.home-button-wrapper:hover .left-arrow{
     transform: translateX(-10px);
 }
 .table-title{
