@@ -10,7 +10,7 @@ const Info = ({ optionItems, activeOption, setActiveOption }) => {
       <div>
         <h1 className="mt-10 text-4xl text-[#e2e8f0]">Ritesh Kumar Verma</h1>
         <div className="pt-3 text-2xl text-[#e2e8f0] ">Full-Stack Engineer</div>
-        <div className="pt-3 text-[#94a3b8] text-lg w-100">
+        <div className="pt-3 text-[#94a3b8] text-lg ">
           Full-Stack developer learning{" "}
           <span className="text-blue-700">React.js</span> and{" "}
           <span className="text-blue-700"> Spring Boot </span> and building

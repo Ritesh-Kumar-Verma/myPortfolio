@@ -19,7 +19,6 @@ const App = () => {
   return (
     <div className='flex justify-center'>
       <CursorLight/>
-
       <Header activeTab={activeTab} setActiveTab={setActiveTab}/>
       
      {

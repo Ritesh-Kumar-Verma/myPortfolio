@@ -55,7 +55,7 @@ const Projects = ({ setActiveTab }) => {
       </div>
       <div className="text-[#E2E8E0] text-5xl mt-2">All Projects</div>
 
-      <div className="my-2 grid grid-cols-4 py-2 ">
+      <div className="my-5 grid grid-cols-4 py-2 ">
         <div className="">Status</div>
         <div className="">Project</div>
         <div className="">Built With</div>

@@ -15,14 +15,14 @@ const Home = ({ activeTab, setActiveTab }) => {
     Skills: <Skills />,
   };
   return (
-    <div className="w-full h-full flex pt-20 justify-around max-xl:flex-col max-xl:items-center mb-4 ">
+    <div className="flex pt-20 justify-around max-xl:flex-col max-xl:items-center mb-4 ">
       <Info
         optionItems={Object.keys(optionItems)}
         activeOption={activeOption}
         setActiveOption={setActiveOption}
       />
-      <div className="w-34/100 max-xl:hidden "></div>
-      {optionItems[activeOption]}
+      <div className="w-17/50 max-xl:hidden "></div>
+       {optionItems[activeOption]} 
     </div>
   );
 };
