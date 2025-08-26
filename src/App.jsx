@@ -1,10 +1,9 @@
 import React, {  useState } from 'react'
-import './App.css'
-import Header from './Components/Header/Header'
-import CursorLight from './Components/CursorLight/CursorLight'
-import Projects from './Components/Projects/Projects'
-import Home from './Components/Home/Home'
-import Contact from './Components/Contact/Contact'
+import Header from './Components/Header'
+import CursorLight from './Components/CursorLight'
+import Projects from './Components/Projects'
+import Home from './Components/Home'
+import Contact from './Components/Contact'
 
 
 const App = () => {
@@ -18,8 +17,9 @@ const App = () => {
   
   
   return (
-    <div className='main-window'>
+    <div className='flex justify-center'>
       <CursorLight/>
+
       <Header activeTab={activeTab} setActiveTab={setActiveTab}/>
       
      {
