@@ -5,15 +5,15 @@ const Header = ({ activeTab, setActiveTab }) => {
 
   //z-50    for z index to be tested
   return (
-    <div className="flex justify-around z-50 p-5 items-center fixed top-0 w-full h-20 border-b-1 bg-[rgb(255,255,255,0.05)]  shadow-[0_8px_32px_0_rgba(0,0,0,0.37)] backdrop-blur-lg">
+    <div className="flex justify-around z-50 py-5 items-center fixed top-0 w-full h-20 border-b-1 bg-[rgb(255,255,255,0.05)]  shadow-[0_8px_32px_0_rgba(0,0,0,0.37)] backdrop-blur-lg  ">
       <div className="bg-[#00bfff] text-[#0a192f] w-10 h-10 rounded-full flex justify-center items-center text-4xl ">
         R
       </div>
       {headerItem.map((data, index) => {
         return (
-          <div
+          <h1
             className={` hover:text-[rgb(100,255,218)] cursor-pointer transform transition-transform hover:scale-130
-                 ${
+         text-sm        ${
                    activeTab == data
                      ? "scale-140 text-[rgb(100,255,218)]  "
                      : ""
@@ -23,7 +23,7 @@ const Header = ({ activeTab, setActiveTab }) => {
             }}
           >
             {data}
-          </div>
+          </h1>
         );
       })}
     </div>

@@ -6,11 +6,11 @@ const Info = ({ optionItems, activeOption, setActiveOption }) => {
     setActiveOption(data);
   };
   return (
-    <div className=" flex justify-center items-start fixed left-15 max-xl:relative   max-xl:left-0">
+    <div className=" flex justify-center items-start fixed left-15 max-xl:relative max-xl:px-5  max-xl:left-0">
       <div>
         <h1 className="mt-10 text-4xl text-[#e2e8f0]">Ritesh Kumar Verma</h1>
         <div className="pt-3 text-2xl text-[#e2e8f0] ">Full-Stack Engineer</div>
-        <div className="pt-3 text-[#94a3b8] text-lg ">
+        <div className="pt-3 text-[#94a3b8] text-lg xl:w-100 ">
           Full-Stack developer learning{" "}
           <span className="text-blue-700">React.js</span> and{" "}
           <span className="text-blue-700"> Spring Boot </span> and building
