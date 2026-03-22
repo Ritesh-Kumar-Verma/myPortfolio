@@ -10,7 +10,7 @@ const Active_Projects = ({ activeTab, setActiveTab }) => {
     summary: {
       icons: ["📍", "🔎", "📤", "👥", "🗺️", "🔒"],
       text: [
-        "Mapify is a React-based location-sharing app in development.",
+        "Mapify is a React-based location-sharing app.",
         "Search friends and connect",
         "Request/share live locations",
         "Create groups to track members (Under Development)",
