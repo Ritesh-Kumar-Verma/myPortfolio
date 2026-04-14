@@ -6,6 +6,8 @@ import weatherify from './Weatherify.png'
 import mapify from './Mapify.png'
 import youtube from './Youtube_Clone.png'
 import gmail from './gmail.svg'
+import react from './react.svg'
+
 export const assets = {
     git,
     instagram,
@@ -14,6 +16,7 @@ export const assets = {
     weatherify,
     mapify,
     youtube,
-    gmail
+    gmail,
+    react
 
 }
