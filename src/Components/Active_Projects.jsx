@@ -1,7 +1,7 @@
 import React from "react";
 import { assets } from "../assets/assets";
 
-const Active_Projects = ({ activeTab, setActiveTab }) => {
+const Active_Projects = ({setActiveTab }) => {
 
   const myLiveProjects = [
   {
@@ -89,6 +89,7 @@ const Active_Projects = ({ activeTab, setActiveTab }) => {
       {myLiveProjects.map((data, index) => {
         return (
           <div
+          key={index}
             className=" group
             flex w-19/20 cursor-pointer hover:bg-[rgba(13,25,44,0.7)] rounded-xl p-2 max-lg:flex-col gap-2
             "
