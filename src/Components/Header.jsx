@@ -1,7 +1,16 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 
-const Header = ({ activeTab, setActiveTab }) => {
+const Header = ({ activeTab}) => {
   const headerItem = ["Home", "Projects", "Contact"];
+  const navigate= useNavigate()
+  const handleTab=(data)=>{
+
+    if(data == "Home") navigate("/home")
+    if(data == "Projects") navigate("/projects")
+    if(data == "Contact") navigate("/contact")
+
+  }
 
   //z-50    for z index to be tested
   return (
@@ -18,9 +27,7 @@ const Header = ({ activeTab, setActiveTab }) => {
                      ? "scale-140 text-[rgb(100,255,218)]  "
                      : ""
                  }`}
-            onClick={() => {
-              setActiveTab(data);
-            }}
+            onClick={()=>handleTab(data)}
           >
             {data}
           </h1>

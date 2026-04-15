@@ -109,6 +109,7 @@ const Home = () => {
 
   return (
     <div className="w-full flex flex-col items-center justify-center">
+      
       {/* Info + terminal */}
       <div className="flex-1 grid grid-cols-1 lg:grid-cols-2 mt-10 mx-10  ">
         {/* Info div  */}
@@ -165,7 +166,7 @@ const Home = () => {
                 />
               </motion.div>
             </div>
-            <div className="text-lg ">
+            <div className="text-lg text-gray-500">
               Full-stack developer specializing in React, JavaScript, Java
               Spring Boot and performance-focused web experiences. I turn
               product ideas and polished designs into fast, accessible

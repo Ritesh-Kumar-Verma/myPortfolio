@@ -12,9 +12,7 @@ const App = () => {
   //   "Home":<Home  activeTab={activeTab} setActiveTab={setActiveTab} />,
   //   "Projects": <Projects setActiveTab={setActiveTab}/>,
   //   "Contact" : <Contact/>
-
   // }
-
   return (
     // <div className='flex justify-center'>
 
