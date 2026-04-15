@@ -9,6 +9,8 @@ const About = () => {
     "I'm passionate about solving Data Structures and Algorithms problems. It helps me sharpen my problem-solving skills, write efficient code, and continuously improve my approach to tackling real-world programming challenges."
   ]
   return (
+    
+
     <div className='  flex justify-center  w-2/3 max-xl:w-full '>
     <div className=' text-[#ffffff] mx-5 mt-10 p-7 bg-[#0b2239] rounded-2xl border border-[rgba(0,255,255,0.2)] transition-transform hover:-translate-y-2 
     drop-shadow-2xl

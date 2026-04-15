@@ -43,11 +43,13 @@ const Projects = ({ setActiveTab }) => {
   ];
 
   return (
+    <div className="flex justify-center w-full">
+
     <div className=" pt-28 flex flex-col   w-4/5 max-sm:w-19/20">
       <div
         className="group cursor-pointer w-fit flex gap-2 text-[#00ffff]"
         onClick={() => setActiveTab("Home")}
-      >
+        >
         <span className="inline-block transition-transform group-hover:-translate-x-2">
           &larr;
         </span>
@@ -67,7 +69,7 @@ const Projects = ({ setActiveTab }) => {
               <div className="  flex items-center border-b border-[rgba(149,151,151,0.37)] gap-2">
                 {data.status == "Live" && <span
                   className="w-3 h-3 bg-[#ff4d4d] rounded-full animate-pulse"
-                ></span>}
+                  ></span>}
                 {data.status}
               </div>
               <div className="  flex items-center border-b border-[rgba(149,151,151,0.37)]">
@@ -90,7 +92,7 @@ const Projects = ({ setActiveTab }) => {
                   href={data.link}
                   target="_blank"
                   rel="noopener noreferrer"
-                >
+                  >
                   Open
                   <span className="inline-block group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform  ">
                     ↗
@@ -102,6 +104,7 @@ const Projects = ({ setActiveTab }) => {
         })}
       </div>
     </div>
+        </div>
   );
 };
 
