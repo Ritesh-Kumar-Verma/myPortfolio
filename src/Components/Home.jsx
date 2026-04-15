@@ -128,9 +128,9 @@ const Home = () => {
             >
             ✨
             </motion.span> */}
-            <div className="w-full"> Hello, I'm Ritesh Kumar Verma</div>
+            <div className="w-full "> Hello, I'm Ritesh Kumar Verma</div>
 
-            <div className="w-full text-3xl lg:text-6xl ">
+            <div className="w-full text-3xl lg:text-6xl whitespace-nowrap">
               <motion.span
                 initial={{}}
                 animate={{ x: [0, -4, 0], y: [0, -10, 0] }}
@@ -204,9 +204,9 @@ const Home = () => {
         </div>
 
         {/* Terminal div  */}
-        <div className="flex justify-center w-9/10  ">
-          <div className="border-2 border-gray-400 flex flex-col h-[500px] rounded-2xl w-full  bg-gray-900 mb-10 ">
-            <div className="relative flex rounded-t-2xl  bg-gray-700 p-3 gap-3 items-center">
+        <div className="flex justify-center w-full  ">
+          <div className="border-2 border-gray-400 flex flex-col h-[500px] rounded-2xl lg:w-3/4 w-9/10  bg-gray-900 mb-10 ">
+            <div className="relative flex rounded-t-2xl  bg-gray-700 p-3 gap-3 items-center ">
               <motion.div
                 initial={{}}
                 animate={{ y: [0, 10, 0] }}
