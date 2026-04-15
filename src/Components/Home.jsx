@@ -116,7 +116,7 @@ const Home = () => {
       <div className="flex-1 grid grid-cols-1 lg:grid-cols-2 mt-10   justify-items-center  ">
         {/* Info div  */}
         <div className="flex-1 flex flex-col items-center w-9/10 lg:w-full   ">
-          <div className="  flex gap-2 items-center flex-col  lg:w-3/4 justify-center ">
+          <div className="  flex gap-2 items-center flex-col  lg:w-3/4 max-sm:w-9/10 justify-center ">
             {/* <motion.span
           animate={{ rotate: [0, -10, 10, -10, 10, 0] }}
           transition={{
@@ -130,7 +130,7 @@ const Home = () => {
             </motion.span> */}
             <div className="w-full "> Hello, I'm Ritesh Kumar Verma</div>
 
-            <div className="w-full text-3xl lg:text-6xl whitespace-nowrap">
+            <div className="w-full max-sm:text-2xl text-3xl lg:text-6xl">
               <motion.span
                 initial={{}}
                 animate={{ x: [0, -4, 0], y: [0, -10, 0] }}
@@ -149,7 +149,7 @@ const Home = () => {
               </motion.span>
             </div>
 
-            <div className="flex jus  gap-2 w-full  ">
+            <div className="flex  gap-2 w-full  ">
               <span className="">&</span>
               <motion.div className="relative inline-block lg:text-2xl">
                 {title[index]}
@@ -168,7 +168,7 @@ const Home = () => {
                 />
               </motion.div>
             </div>
-            <div className="text-lg text-gray-500">
+            <div className="text-lg max-sm:text-sm text-gray-500">
               Full-stack developer specializing in React, JavaScript, Java
               Spring Boot and performance-focused web experiences. I turn
               product ideas and polished designs into fast, accessible
@@ -227,7 +227,7 @@ const Home = () => {
             <div
               ref={terminalRef}
               className="p-3 flex flex-col gap-2 text-gray-400 font-bold 
-             overflow-y-auto"
+             overflow-y-auto max-sm:text-sm"
             >
               {terminalHistory.map((data, index) => {
                 // console.log(data);
