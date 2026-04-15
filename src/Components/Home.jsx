@@ -33,10 +33,12 @@ import React, { useEffect, useRef, useState } from "react";
 import { motion } from "framer-motion";
 import IconSlider from "../IconSlider";
 import { FaRocket } from "react-icons/fa";
+import { useNavigate } from "react-router-dom";
 
 
 const Home = () => {
   const terminalRef = useRef(null);
+  const navigate = useNavigate()
 
   const [terminalText, setTerminalText] = useState("");
 
@@ -108,12 +110,12 @@ const Home = () => {
   }, []);
 
   return (
-    <div className="w-full flex flex-col items-center justify-center">
+    <div className="w-full flex flex-col items-center justify-center ">
       
       {/* Info + terminal */}
-      <div className="flex-1 grid grid-cols-1 lg:grid-cols-2 mt-10 mx-10  ">
+      <div className="flex-1 grid grid-cols-1 lg:grid-cols-2 mt-10   justify-items-center  ">
         {/* Info div  */}
-        <div className="flex-1 flex flex-col items-center w-full justify-center">
+        <div className="flex-1 flex flex-col items-center w-9/10 lg:w-full   ">
           <div className="  flex gap-2 items-center flex-col  lg:w-3/4 justify-center ">
             {/* <motion.span
           animate={{ rotate: [0, -10, 10, -10, 10, 0] }}
@@ -184,7 +186,7 @@ const Home = () => {
                   backgroundColor: "rgba(214, 206, 206,1)",
                   cursor: "pointer",
                 }}
-                onClick={() => {}}
+                onClick={() => navigate("/projects")}
                 className=" rounded-full px-6 py-4 mb-10 bg-white text-black  text-xl"
               >
                 Explore Projects
@@ -202,8 +204,8 @@ const Home = () => {
         </div>
 
         {/* Terminal div  */}
-        <div className="flex justify-center ">
-          <div className="border-2 border-gray-400 flex flex-col h-[500px] rounded-2xl w-4/5 bg-gray-900 mb-10 ">
+        <div className="flex justify-center w-9/10  ">
+          <div className="border-2 border-gray-400 flex flex-col h-[500px] rounded-2xl w-full  bg-gray-900 mb-10 ">
             <div className="relative flex rounded-t-2xl  bg-gray-700 p-3 gap-3 items-center">
               <motion.div
                 initial={{}}
@@ -268,7 +270,7 @@ const Home = () => {
         </div>
       </div>
 
-      <div className="w-3/5 lg:w-2/5 border rounded-xl border-gray-500">
+      <div className="w-3/5 lg:w-2/5 md:w-3/5 w-9/10 border rounded-xl border-gray-500">
       <div className="flex gap-2 p-4 border-b border-gray-500">
       <FaRocket size={20} color="gray" />
       Tech Stack

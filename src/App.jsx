@@ -21,7 +21,7 @@ const App = () => {
     //  }
 
     // </div>
-    <div>
+    <div className="">
       {/* <CursorLight/> */}
       <Header activeTab={activeTab} setActiveTab={setActiveTab} />
       <Routes>
