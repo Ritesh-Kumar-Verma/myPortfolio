@@ -270,7 +270,7 @@ const Home = () => {
         </div>
       </div>
 
-      <div className="w-3/5 lg:w-2/5 md:w-3/5 w-9/10 border rounded-xl border-gray-500">
+      <div className=" lg:w-2/5 md:w-3/5 w-9/10 border rounded-xl border-gray-500 mb-5">
       <div className="flex gap-2 p-4 border-b border-gray-500">
       <FaRocket size={20} color="gray" />
       Tech Stack
