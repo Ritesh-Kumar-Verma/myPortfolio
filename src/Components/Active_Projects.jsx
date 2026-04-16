@@ -1,7 +1,9 @@
 import React from "react";
 import { assets } from "../assets/assets";
+import { useNavigate } from "react-router-dom";
 
 const Active_Projects = ({setActiveTab }) => {
+  const navigate = useNavigate()
 
   const myLiveProjects = [
   {
@@ -72,14 +74,17 @@ const Active_Projects = ({setActiveTab }) => {
 
 
   return (
-    <div className=" w-66/100 mx-5  max-xl:w-19/20  
-      flex flex-col  items-center  mt-10 bg-[#0b2239] rounded-xl shadow-2xl
-      border border-[rgba(0,255,255,0.2)] transition-shadow duration-300  gap-2 pb-2
+    <div
+    //  className=" w-66/100 mx-5  max-xl:w-19/20  
+    //   flex flex-col  items-center  mt-10 bg-[#0b2239] rounded-xl shadow-2xl
+    //   border border-[rgba(0,255,255,0.2)] transition-shadow duration-300  gap-2 pb-2
 
-     ">
+    //  " 
+      className="w-9/10 border-white/10 bg-white/5 rounded-2xl p-4 flex flex-col gap-4 " 
+     >
 
       <div className="    
-        mt-2 flex items-center gap-2 text-[#ff4d4d] font-bold text-base 
+         flex items-center justify-center gap-2 text-[#ff4d4d] font-bold text-base 
       
        ">
         <span className="w-3 h-3 bg-[#ff4d4d] rounded-full animate-pulse"></span>
@@ -91,7 +96,7 @@ const Active_Projects = ({setActiveTab }) => {
           <div
           key={index}
             className=" group
-            flex w-19/20 cursor-pointer hover:bg-[rgba(13,25,44,0.7)] rounded-xl p-2 max-lg:flex-col gap-2
+            flex w-full border border-white/20 cursor-pointer hover:bg-[rgba(13,25,44,0.7)] rounded-xl p-2 max-lg:flex-col gap-2
             "
             onClick={() =>
               window.open(data.url, "_blank", "noopener,noreferrer")
@@ -117,8 +122,6 @@ const Active_Projects = ({setActiveTab }) => {
                   )})
                 
                 }
-
-
               </div>
             </div>
           </div>
@@ -129,9 +132,8 @@ const Active_Projects = ({setActiveTab }) => {
         <div
           className=" border-b-2 border-transparent group-hover:border-b-[rgb(100,255,218)]
              "
-          onClick={() => {
-            setActiveTab("Projects");
-          }}
+          onClick={() => navigate("/projects")
+          }
         >
           View Full Project Archive
         </div>

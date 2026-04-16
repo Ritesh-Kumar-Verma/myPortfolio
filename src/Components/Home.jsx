@@ -37,6 +37,7 @@ import { useNavigate } from "react-router-dom";
 import { FaShieldAlt } from "react-icons/fa";
 import { MdAdjust } from "react-icons/md";
 import { FaStar,FaHandshake  } from "react-icons/fa";
+import ActiveProjects from "./Active_Projects"
 
 const Home = () => {
   const terminalRef = useRef(null);
@@ -77,7 +78,7 @@ const Home = () => {
     help: () => "Available commands:\nhelp, about, skills, projects, clear",
     about: () => "Hi, I am Ritesh, a Full Stack Developer",
     skills: () => "React.js, Java, Spring Boot, Node.js",
-    projects: () => "1. Mapify\n2. Portfolio Website",
+    projects: () => "1. Mapify_2. Portfolio Website_3. Weatherify_4. Expense Tracker",
     clear: () => "",
   };
 
@@ -304,9 +305,21 @@ const Home = () => {
       </div>
 
       {/* About me */}
-      <div className="mt-10 mb-10 flex flex-col w-4/5 max-md:w-4/5 sm:text-md items-center">
-        <h1 className="text-6xl font-extrabold ">About Me</h1>
-        <p className="mt-10 text-2xl text-gray-500 text-justify">
+      <div className="mt-10 mb-5 flex flex-col w-4/5 max-md:w-4/5 items-center">
+        <div className="relative text-6xl max-sm:text-2xl font-extrabold ">
+          About Me
+          <motion.div 
+          initial={{width:0}}
+          animate={{width:[0,"100%"]}}
+          transition={{
+            duration:1.5,
+            ease:"easeOut",
+            repeat:Infinity
+          }}
+          className="w-full h-[2px] absolute left-0 bottom-0 bg-gradient-to-r from-[#ffff] "
+          />
+          </div>
+        <p className="mt-5 max-sm:text-lg text-2xl text-gray-500 text-justify">
           Front-End Developer skilled in React.js with Spring Boot knowledge. I
           build responsive, clean, and user-friendly web apps and practice DSA
           to improve problem-solving skills.
@@ -363,7 +376,7 @@ const Home = () => {
       </div>
 
 
-
+          {/* core value */}
       <div className="flex flex-col justify-center w-9/10  items-center  ">
         <div className="text-6xl font-extrabold max-sm:text-2xl max-md:text-4xl relative w-fit p-1">
           Core Value
@@ -389,14 +402,13 @@ const Home = () => {
             ))}
 
         </div>
+      </div>
 
 
 
 
-
-
-
-
+      <div className="w-full flex justify-center mb-10">
+        <ActiveProjects/>
       </div>
 
 

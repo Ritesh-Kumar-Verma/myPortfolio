@@ -22,7 +22,7 @@ const App = () => {
 
     // </div>
     <div className="">
-      {/* <CursorLight/> */}
+      <CursorLight/>
       <Header activeTab={activeTab} setActiveTab={setActiveTab} />
       <Routes>
         <Route path="/" element={<Home />} />
