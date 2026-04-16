@@ -93,7 +93,11 @@ const Info = () => {
           React.js • Java Spring Boot • Node.js
         </div>
 
-        <div className="w-full mt-5">
+
+
+
+        <div className="w-full mt-5 flex justify-between">
+
           <motion.button
             whileHover={{
               scale: 1.1,
@@ -114,7 +118,40 @@ const Info = () => {
               ➤
             </motion.span>{" "}
           </motion.button>
+
+          <motion.a
+          href="./Ritesh_Resume1.pdf"
+          download
+            whileHover={{
+              scale: 1.1,
+              boxShadow: "0px 0px 2px 2px rgba(255,255,255,1)",
+              backgroundColor: "rgba(214, 206, 206,1)",
+              cursor: "pointer",
+            }}
+            
+            className=" rounded-full px-6 py-4  bg-white text-black  text-xl"
+          >
+            Download Resume
+            <motion.span
+              initial={{}}
+              animate={{ x: [0, 10, 0] }}
+              transition={{ repeat: Infinity, duration: 2 }}
+              className="inline-block ml-2"
+            >
+              ➤
+            </motion.span>{" "}
+          </motion.a>
+
+
+
+
         </div>
+
+
+
+
+
+
 
         <div className="mt-5 flex gap-10 justify-evenly">
           <a
@@ -136,7 +173,7 @@ const Info = () => {
             />
           </a>
           <a
-            href="https://www.linkedin.com/in/ritesh-verma-512468244"
+            href="https://www.linkedin.com/in/ritesh-kumar-verma-512468244/"
             target="_blank"
             rel="noopener noreferrer"
           >
