@@ -1,47 +1,119 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { assets } from "../assets/assets";
+import { useNavigate } from "react-router-dom";
+import { motion } from "framer-motion";
 
-const Info = ({ optionItems, activeOption, setActiveOption }) => {
-  const handleActiveOption = (data) => {
-    setActiveOption(data);
-  };
+const Info = () => {
+  const navigate = useNavigate();
+
+  const [index, setIndex] = useState(0);
+  const title = [
+    "Web Developer",
+    "Frontend Engineer",
+    "UI Developer",
+    "React Developer",
+    "Backend Developer",
+    "Spring Boot Developer",
+    "Java Developer",
+  ];
+  useEffect(() => {
+    const titleSwapInterval = setInterval(() => {
+      setIndex((p) => (p + 1) % title.length);
+    }, 2000);
+
+    return () => clearInterval(titleSwapInterval);
+  }, []);
+
+
+
   return (
-    <div className=" flex justify-center items-start fixed left-15 max-xl:relative max-xl:px-5  max-xl:left-0">
-      <div>
-        <h1 className="mt-10 text-4xl text-[#e2e8f0]">Ritesh Kumar Verma</h1>
-        <div className="pt-3 text-2xl text-[#e2e8f0] ">Full-Stack Engineer</div>
-        <div className="pt-3 text-[#94a3b8] text-lg xl:w-100 ">
-          Full-Stack developer learning{" "}
-          <span className="text-blue-700">React.js</span> and{" "}
-          <span className="text-blue-700"> Spring Boot </span> and building
-          responsive web interfaces.
+    <div className="flex-1 flex flex-col items-center w-9/10 lg:w-full mb-10 ">
+
+
+
+      <div className="  flex gap-2 items-center flex-col  lg:w-3/4  justify-center ">
+
+      
+        <div className=" w-full flex gap-2">
+          <motion.span
+            animate={{ rotate: [0, -10, 10, -10, 10, 0] }}
+            transition={{
+              duration: 2,
+              repeat: Infinity,
+              ease: "easeInOut",
+            }}
+            className="inline-block origin-center"
+          >
+            ✨
+          </motion.span>
+          <div className="w-full text-md"> Hello, I'm Ritesh Kumar Verma</div>
         </div>
 
-        <div className="pt-3">
-          {optionItems.map((data, index) => {
-            return (
-              <div
-                key={index}
-                className={` relative flex items-center overflow-hidden  text-gray-500 hover:text-[#00ffff]
-              hover:pl-22 transition-all duration-300  
-              cursor-pointer
-              before:content-[''] before:absolute before:left-0 before:top-1/2 
-              before:-translate-y-1/2 before:h-[2px]  
-               before:transition-[width] before:duration-300 
-              hover:before:w-20 hover:before:bg-[#00ffff]
-              
-              
-              ${
-                activeOption == data
-                  ? "before:w-20 before:bg-[#00ffff] pl-22"
-                  : "before:w-10 before:bg-white pl-12"
-              }`}
-                onClick={() => handleActiveOption(data)}
-              >
-                {data}
-              </div>
-            );
-          })}
+        <div className="w-full text-3xl lg:text-5xl">
+          <motion.span
+            initial={{}}
+            animate={{ x: [0, -4, 0], y: [0, -10, 0] }}
+            transition={{ repeat: Infinity, duration: 2 }}
+            className=" bg-gradient-to-r from-white to-gray-400 bg-clip-text text-transparent font-extrabold inline-block hover:scale-105  transition-transform duration-200"
+          >
+            Full-Stack
+          </motion.span>{" "}
+          <motion.span
+            initial={{}}
+            animate={{ x: [-4, 0, -4], y: [-10, 0, -10] }}
+            transition={{ repeat: Infinity, duration: 2 }}
+            className="bg-gradient-to-r from-white to-gray-400 bg-clip-text text-transparent font-extrabold inline-block hover:scale-105 transition-transform duration-200"
+          >
+            Developer
+          </motion.span>
+        </div>
+
+        <div className="flex  gap-2 w-full  ">
+          <span className="">&</span>
+          <motion.div className="relative inline-block lg:text-2xl">
+            {title[index]}
+
+            <motion.div
+              key={index}
+              initial={{ width: 0 }}
+              animate={{ width: "100%" }}
+              transition={{ duration: 0.6, ease: "easeOut" }}
+              className="absolute left-0 bottom-0 h-[2px] bg-gradient-to-r from-[#ffff]"
+            />
+          </motion.div>
+        </div>
+
+        <div className=" mt-3 text-lg max-sm:text-sm text-gray-500">
+          Full-stack developer specializing in React, JavaScript, Java Spring
+          Boot and performance-focused web experiences. I turn product ideas and
+          polished designs into fast, accessible interfaces.
+        </div>
+
+        <div className="text-white border-2 rounded-full mt-2 px-4 py-2 bg-blue-950 hover:scale-105 transition-transform duration-300">
+          React.js • Java Spring Boot • Node.js
+        </div>
+
+        <div className="w-full mt-5">
+          <motion.button
+            whileHover={{
+              scale: 1.1,
+              boxShadow: "0px 0px 2px 2px rgba(255,255,255,1)",
+              backgroundColor: "rgba(214, 206, 206,1)",
+              cursor: "pointer",
+            }}
+            onClick={() => navigate("/projects")}
+            className=" rounded-full px-6 py-4  bg-white text-black  text-xl"
+          >
+            Explore Projects
+            <motion.span
+              initial={{}}
+              animate={{ x: [0, 10, 0] }}
+              transition={{ repeat: Infinity, duration: 2 }}
+              className="inline-block ml-2"
+            >
+              ➤
+            </motion.span>{" "}
+          </motion.button>
         </div>
 
         <div className="mt-5 flex gap-10 justify-evenly">
@@ -76,6 +148,9 @@ const Info = ({ optionItems, activeOption, setActiveOption }) => {
           </a>
         </div>
       </div>
+
+
+
     </div>
   );
 };

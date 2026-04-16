@@ -8,27 +8,17 @@ import { Route, Routes } from "react-router-dom";
 
 const App = () => {
   const [activeTab, setActiveTab] = useState("Home");
-  // const tab= {
-  //   "Home":<Home  activeTab={activeTab} setActiveTab={setActiveTab} />,
-  //   "Projects": <Projects setActiveTab={setActiveTab}/>,
-  //   "Contact" : <Contact/>
-  // }
+ 
   return (
-    // <div className='flex justify-center'>
-
-    //  {
-    //   tab[activeTab]
-    //  }
-
-    // </div>
+   
     <div className="">
       <CursorLight/>
       <Header activeTab={activeTab} setActiveTab={setActiveTab} />
       <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/home" element={<Home />} />
-        <Route path="/projects" element={<Projects />} />
-        <Route path="/contact" element={<Contact />} />
+        <Route path="/" element={<Home setActiveTab={setActiveTab} />} />
+        <Route path="/home" element={<Home setActiveTab={setActiveTab} />} />
+        <Route path="/projects" element={<Projects setActiveTab={setActiveTab} />} />
+        <Route path="/contact" element={<Contact setActiveTab={setActiveTab} />} />
       </Routes>
     </div>
   );

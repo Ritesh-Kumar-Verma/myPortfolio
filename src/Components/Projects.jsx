@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 
 
 const Projects = ({ setActiveTab }) => {
@@ -41,6 +41,12 @@ const Projects = ({ setActiveTab }) => {
       link: "https://github.com/Ritesh-Kumar-Verma/Rock-Paper-Scissors.git",
     },
   ];
+  useEffect(()=>{
+    setActiveTab("Projects")
+    return ()=>{
+      setActiveTab("")
+    }
+  },[])
 
   return (
     <div className="flex justify-center w-full">

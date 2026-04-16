@@ -1,7 +1,7 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
 
-const Header = ({ activeTab}) => {
+const Header = ({ activeTab , setActiveTab}) => {
   const headerItem = ["Home", "Projects", "Contact"];
   const navigate= useNavigate()
   const handleTab=(data)=>{

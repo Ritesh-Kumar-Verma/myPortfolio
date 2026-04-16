@@ -1,6 +1,12 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { assets } from "../assets/assets";
-const Contact = () => {
+const Contact = ({setActiveTab}) => {
+  useEffect(()=>{
+    setActiveTab("Contact")
+    return ()=>{
+      setActiveTab("")
+    }
+  },[])
 
 
 
