@@ -1,7 +1,9 @@
 import React, { useEffect } from "react";
+import { useNavigate } from "react-router-dom";
 
 
 const Projects = ({ setActiveTab }) => {
+  const navigate = useNavigate()
   const projectList = [
     {
       status: "Live",
@@ -51,10 +53,10 @@ const Projects = ({ setActiveTab }) => {
   return (
     <div className="flex justify-center w-full">
 
-    <div className=" pt-28 flex flex-col   w-4/5 max-sm:w-19/20">
+    <div className=" pt-10 flex flex-col   w-4/5 max-sm:w-19/20">
       <div
         className="group cursor-pointer w-fit flex gap-2 text-[#00ffff]"
-        onClick={() => setActiveTab("Home")}
+        onClick={()=>navigate("/home")}
         >
         <span className="inline-block transition-transform group-hover:-translate-x-2">
           &larr;

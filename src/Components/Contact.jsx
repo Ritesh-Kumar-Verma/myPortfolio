@@ -12,7 +12,7 @@ const Contact = ({setActiveTab}) => {
 
   return (
         <div className="flex justify-center w-full">
-    <section className="py-25  w-2/5 max-xl:w-2/3 max-sm:w-4/5 flex flex-col justify-center ">
+    <section className="py-10  w-2/5 max-xl:w-2/3 max-sm:w-4/5 flex flex-col justify-center ">
       <h1 className="text-3xl text-[#00ffff] mb-5 text-center" >Contact Me</h1>
       <p>I'm open to opportunities and collaborations. Drop me a message!</p>
 
@@ -41,7 +41,7 @@ const Contact = ({setActiveTab}) => {
           <div className="absolute left-1/2 -translate-x-1/2 hidden group-hover:block  ">Git</div>
         </a>
         <a className="relative group text-[#00ffff]"
-          href="https://www.linkedin.com/in/ritesh-verma-512468244"
+          href="https://www.linkedin.com/in/ritesh-kumar-verma-512468244/"
           target="_blank"
           rel="noopener noreferrer"
           >
