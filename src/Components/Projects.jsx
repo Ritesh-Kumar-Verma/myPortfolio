@@ -7,20 +7,26 @@ const Projects = ({ setActiveTab }) => {
   const projectList = [
     {
       status: "Live",
+      title: "AI Job Search",
+      tech: ["React.js", "Spring Boot","Gemini API","Adzuna API", "PostgreSQL", "Render"],
+      link: "https://ritesh-kumar-verma.github.io/AI_Job_Search-frontend/",
+    },
+    {
+      status: "Live",
       title: "Mapify",
-      tech: ["React", "Spring Boot", "PostgreSQL", "Render"],
+      tech: ["React.js", "Spring Boot", "PostgreSQL", "Render"],
       link: "https://ritesh-kumar-verma.github.io/Mapify/",
     },
     {
       status: "Live",
       title: "Expense Tracker",
-      tech: ["React", "JavaScript"],
+      tech: ["React.js", "JavaScript"],
       link: "https://ritesh-kumar-verma.github.io/Expense-Tracker/",
     },
     {
       status: "Live",
       title: "Weatherify",
-      tech: ["React", "JavaScript", "OpenWeatherMap API"],
+      tech: ["React.js", "JavaScript", "OpenWeatherMap API"],
       link: "https://ritesh-kumar-verma.github.io/weatherify/",
     },
     {

@@ -96,7 +96,7 @@ const Info = () => {
 
 
 
-        <div className="w-full mt-5 flex justify-between">
+        <div className="w-full mt-5 flex justify-between ">
 
           <motion.button
             whileHover={{
@@ -106,14 +106,14 @@ const Info = () => {
               cursor: "pointer",
             }}
             onClick={() => navigate("/projects")}
-            className=" rounded-full px-6 py-4  bg-white text-black  text-xl"
+            className=" rounded-full px-6 py-4 max-sm:p-2 bg-white text-black  text-xl max-sm:text-sm"
           >
             Explore Projects
             <motion.span
               initial={{}}
               animate={{ x: [0, 10, 0] }}
               transition={{ repeat: Infinity, duration: 2 }}
-              className="inline-block ml-2"
+              className="inline-block ml-2 max-sm:ml-0"
             >
               ➤
             </motion.span>{" "}
@@ -129,14 +129,14 @@ const Info = () => {
               cursor: "pointer",
             }}
             
-            className=" rounded-full px-6 py-4  bg-white text-black  text-xl"
+            className=" rounded-full px-6 py-4 max-sm:p-2  bg-white text-black  text-xl max-sm:text-sm"
           >
             Download Resume
             <motion.span
               initial={{}}
               animate={{ x: [0, 10, 0] }}
               transition={{ repeat: Infinity, duration: 2 }}
-              className="inline-block ml-2"
+              className="inline-block ml-2 max-sm:ml-0 "
             >
               ➤
             </motion.span>{" "}

@@ -7,8 +7,9 @@ import mapify from './Mapify.png'
 import youtube from './Youtube_Clone.png'
 import gmail from './gmail.svg'
 import react from './react.svg'
-
+import aijob from "./AiJob.png"
 export const assets = {
+    aijob,
     git,
     instagram,
     linkedin,
