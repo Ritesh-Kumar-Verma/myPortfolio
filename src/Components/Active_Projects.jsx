@@ -20,7 +20,7 @@ const Active_Projects = ({ setActiveTab }) => {
     <>Responsive Design: Fully optimized dark-themed UI for seamless desktop and mobile tracking.</>,
   ],
 },
-      url: "https://ritesh-kumar-verma.github.io/AI_Job_Search-frontend/",
+      url: "https://ritesh-kumar-verma.github.io/AI_Job_Search/",
     },
     {
       sample: assets.mapify,

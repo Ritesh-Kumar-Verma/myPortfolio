@@ -9,7 +9,7 @@ const Projects = ({ setActiveTab }) => {
       status: "Live",
       title: "AI Job Search",
       tech: ["React.js", "Spring Boot","Gemini API","Adzuna API", "PostgreSQL", "Render"],
-      link: "https://ritesh-kumar-verma.github.io/AI_Job_Search-frontend/",
+      link: "https://ritesh-kumar-verma.github.io/AI_Job_Search/",
     },
     {
       status: "Live",
