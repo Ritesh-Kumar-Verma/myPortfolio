@@ -10,16 +10,16 @@ const Active_Projects = ({ setActiveTab }) => {
       sample: assets.aijob,
       title: "AI job Search",
       summary: {
-        icons: ["🤖", "🎯", "🌍", "🔐", "⚙️", "📱"],
-        text: [
-          <>AI Resume Engine: Uses  <span className="text-cyan-300">Gemini API</span> to extract skills and summarize resumes with LLM precision.</>,
-          <>Predictive Match Scoring: Calculates compatibility percentages between user skills and job requirements.</>,
-          <>Live Market Integration: Fetches real-time job listings via <span className="text-cyan-300">Adzuna API</span> based on dynamic filters.</>,
-          <>Secure Authentication: Built with  <span className="text-cyan-300">Spring Security</span> and  <span className="text-cyan-300">JWT</span> for encrypted, stateless user access.</>,
-          <>Enterprise Backend: High-performance  <span className="text-cyan-300">Java Spring Boot</span> architecture backed by  <span className="text-cyan-300">PostgreSQL</span>.</>,
-        <>Responsive Design: Fully optimized dark-themed UI for seamless desktop and mobile tracking.</>,
-        ],
-      },
+  icons: ["🤖", "🎯", "🌍", "🔐", "⚙️", "📱"],
+  text: [
+    <>AI Resume Engine: Uses <span className="text-cyan-300">Gemini API</span> with a fallback to <span className="text-cyan-300">Groq AI</span> to extract skills and summarize resumes with LLM precision.</>,
+    <>Predictive Match Scoring: Calculates compatibility percentages between user skills and job requirements.</>,
+    <>Live Market Integration: Fetches real-time job listings via <span className="text-cyan-300">Adzuna API</span> based on dynamic filters.</>,
+    <>Secure Authentication: Built with <span className="text-cyan-300">Spring Security</span> and <span className="text-cyan-300">JWT</span> for encrypted, stateless user access.</>,
+    <>Enterprise Backend: High-performance <span className="text-cyan-300">Java Spring Boot</span> architecture backed by <span className="text-cyan-300">PostgreSQL</span>.</>,
+    <>Responsive Design: Fully optimized dark-themed UI for seamless desktop and mobile tracking.</>,
+  ],
+},
       url: "https://ritesh-kumar-verma.github.io/AI_Job_Search-frontend/",
     },
     {
