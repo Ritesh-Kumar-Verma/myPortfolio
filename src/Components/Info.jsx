@@ -120,7 +120,7 @@ const Info = () => {
           </motion.button>
 
           <motion.a
-          href="./Ritesh_Resume1.pdf"
+          href="./Ritesh_Resume.pdf"
           download
             whileHover={{
               scale: 1.1,
