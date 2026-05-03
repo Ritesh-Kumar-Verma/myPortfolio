@@ -1,3 +1,4 @@
+import React from 'react'
 import { motion } from "framer-motion";
 import IconSlider from "../IconSlider";
 import { FaRocket } from "react-icons/fa";
@@ -41,7 +42,7 @@ const Home = ({ setActiveTab }) => {
   };
 
   return (
-    <div className="w-full flex flex-col items-center justify-center ">
+    <div className="relative w-full flex flex-col items-center justify-center ">
       {/* Info + terminal */}
       <div className="flex-1 grid grid-cols-1 lg:grid-cols-2 mt-10   justify-items-center ">
         {/* Info div  */}
@@ -50,6 +51,7 @@ const Home = ({ setActiveTab }) => {
         {/* Terminal div  */}
         <Terminal />
       </div>
+
 
       <div className=" lg:w-2/5 md:w-3/5 w-9/10 border rounded-xl border-gray-500">
         <div className="flex gap-2 p-4 border-b border-gray-500">
@@ -120,12 +122,12 @@ const Home = ({ setActiveTab }) => {
         <div className="w-full grid grid-cols-[30%_70%] gap-1 mt-5 p-4 border border-white/20 bg-white/5 backdrop-blur-md rounded-xl shadow-lg hover:scale-104 transition-transform duration-300">
           {Object.keys(skills).map((data, index) => {
             return (
-              <>
+              <React.Fragment key={index}>
                 <h1 className=" text-xl text-white max-sm:text-sm">{data}</h1>
                 <p className=" text-md text-gray-400 max-sm:text-sm">
                   {skills[data]}
                 </p>
-              </>
+              </React.Fragment>
             );
           })}
         </div>
@@ -145,7 +147,7 @@ const Home = ({ setActiveTab }) => {
 
         <div className="flex flex-col lg:flex-row gap-4 w-full  mt-5 mb-10 ">
           {Object.keys(coreValue).map((data, index) => (
-            <div className="border border-white/20 bg-white/5 rounded-xl shadow-2xl backdrop-blur-md p-4 flex flex-col items-center hover:scale-104 transition-transform duration-300 ">
+            <div key={index} className="border border-white/20 bg-white/5 rounded-xl shadow-2xl backdrop-blur-md p-4 flex flex-col items-center hover:scale-104 transition-transform duration-300 ">
               <div className="flex items-center gap-2">
                 {coreValueIcon[data]}
 
