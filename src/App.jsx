@@ -5,22 +5,39 @@ import Projects from "./Components/Projects";
 import Home from "./Components/Home";
 import Contact from "./Components/Contact";
 import { Route, Routes } from "react-router-dom";
+import Loading from "./Components/Loading";
 
 const App = () => {
   const [activeTab, setActiveTab] = useState("Home");
- 
+
+  const [progress, setProgress] = useState(0);
+
   return (
-   
-    <div className="">
-      <CursorLight/>
-      <Header activeTab={activeTab} setActiveTab={setActiveTab} />
-      <Routes>
-        <Route path="/" element={<Home setActiveTab={setActiveTab} />} />
-        <Route path="/home" element={<Home setActiveTab={setActiveTab} />} />
-        <Route path="/projects" element={<Projects setActiveTab={setActiveTab} />} />
-        <Route path="/contact" element={<Contact setActiveTab={setActiveTab} />} />
-      </Routes>
-    </div>
+    <>
+      {progress < 100 ? (
+        <Loading progress={progress} setProgress={setProgress} />
+      ) : (
+        <div className="">
+          <CursorLight />
+          <Header activeTab={activeTab} setActiveTab={setActiveTab} />
+          <Routes>
+            <Route path="/" element={<Home setActiveTab={setActiveTab} />} />
+            <Route
+              path="/home"
+              element={<Home setActiveTab={setActiveTab} />}
+            />
+            <Route
+              path="/projects"
+              element={<Projects setActiveTab={setActiveTab} />}
+            />
+            <Route
+              path="/contact"
+              element={<Contact setActiveTab={setActiveTab} />}
+            />
+          </Routes>
+        </div>
+      )}
+    </>
   );
 };
 

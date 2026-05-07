@@ -93,26 +93,34 @@ const Terminal = () => {
           <div className="flex gap-2  ">
             <p className="relative text-green-600">
               guest@ritesh:~$
-              <motion.span
-                initial={{}}
-                animate={{ opacity: [0, 1, 0] }}
-                transition={{
-                  duration: 2,
-                  repeat: Infinity,
-                  ease: "easeOut",
-                }}
-                className={`${terminalText == "" ? "absolute right-[-1]  inline-block h-[1.1em] w-2 ml-1  bg-green-500" : ""} `}
-              ></motion.span>
+              
             </p>
-
-            <input
-              type="text"
-              placeholder=" Type a command..."
-              className="  focus:outline-none caret-transparent "
-              value={terminalText}
-              onChange={handleTerminal}
-              onKeyDown={handleKeyDown}
-            />
+  {/* Command Line */}
+  <div className="relative flex-1 flex items-center">
+    <input
+      type="text"
+      placeholder="Type a command..."
+      className="bg-transparent border-none focus:outline-none caret-transparent w-full z-10 text-gray-400 font-bold"
+      value={terminalText}
+      onChange={handleTerminal}
+      onKeyDown={handleKeyDown}
+      autoFocus
+    />
+    
+    {/* The Custom Cursor */}
+    {terminalText === "" && (
+      <motion.span
+        animate={{ opacity: [0, 1, 0] }}
+        transition={{
+          duration: 1, 
+          repeat: Infinity,
+          ease: "linear",
+        }}
+        className="absolute left-0 inline-block h-[1.2em] w-2 bg-green-500"
+        style={{ pointerEvents: 'none' }} 
+      />
+    )}
+</div>
           </div>
         </div>
       </div>

@@ -8,10 +8,14 @@ import youtube from './Youtube_Clone.png'
 import gmail from './gmail.svg'
 import react from './react.svg'
 import aijob from "./AiJob.png"
-
-
+import mylogo from "./mylogo.png"
+import mylogo2 from "./mylogo2.png"
+import mylogo3 from "./mylogo3.png"
 
 export const assets = {
+    mylogo3,
+    mylogo2,
+    mylogo,
     aijob,
     git,
     instagram,

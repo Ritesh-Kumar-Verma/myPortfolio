@@ -48,9 +48,7 @@ const About = () => {
           />
         </div>
         <p className="mt-5 max-sm:text-lg text-2xl text-gray-500 text-justify">
-          Front-End Developer skilled in React.js with Spring Boot knowledge. I
-          build responsive, clean, and user-friendly web apps and practice DSA
-          to improve problem-solving skills.
+          I am a Full-Stack Developer specializing in the React.js and Spring Boot ecosystem. I bridge the gap between intuitive front-end design and robust back-end logic. Driven by a passion for problem-solving, I constantly sharpen my skills through DSA practice to build high-performance web solutions.
         </p>
       </div>
 
