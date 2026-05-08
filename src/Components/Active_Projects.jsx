@@ -95,7 +95,7 @@ const Active_Projects = ({ setActiveTab }) => {
         return (
           <div
             key={index}
-            className=" group
+            className="entry group
             flex w-full border border-white/20 cursor-pointer hover:bg-[rgba(13,25,44,0.7)] rounded-xl p-2 max-lg:flex-col gap-2
             "
             onClick={() =>
@@ -125,8 +125,8 @@ const Active_Projects = ({ setActiveTab }) => {
                 {data.summary.icons.map((icon, i) => {
                   return (
                     <React.Fragment key={i}>
-                      <div className="flex justify-center">{icon}</div>
-                      <div>{data.summary.text[i]}</div>
+                      <div className="entry flex justify-center">{icon}</div>
+                      <div className="entry-text">{data.summary.text[i]}</div>
                     </React.Fragment>
                   );
                 })}

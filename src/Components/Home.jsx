@@ -36,7 +36,7 @@ const Home = ({ setActiveTab }) => {
 
 
 
-      <div className=" lg:w-2/5 md:w-3/5 w-9/10 border rounded-xl border-gray-500">
+      <div className="slider-entry lg:w-2/5 md:w-3/5 w-9/10 border rounded-xl border-gray-500">
         <div className="flex gap-2 p-4 border-b border-gray-500">
           <FaRocket size={20} color="gray" />
           Tech Stack
@@ -44,7 +44,7 @@ const Home = ({ setActiveTab }) => {
         <IconSlider />
       </div>
 
-      <div className="mt-10 w-full flex justify-center">
+      <div className="active-project-entry mt-10 w-full flex justify-center ">
         <ActiveProjects />
       </div>
 

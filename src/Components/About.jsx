@@ -23,6 +23,7 @@ const About = () => {
     Innovation: "Embracing cutting-edge technologies to solve complex problems",
     Collaboration: "Great products are built by teams, not individuals",
   };
+
   const coreValueIcon = {
     "Quality First": <FaShieldAlt size={20} color="white" />,
     "User-Centric": <MdAdjust size={20} color="white" />,
@@ -33,7 +34,7 @@ const About = () => {
   return (
     <React.Fragment>
       {/* About me */}
-      <div className="mt-10 mb-5 flex flex-col w-4/5 max-md:w-4/5 items-center">
+      <div className="entry mt-10 mb-5 flex flex-col w-4/5 max-md:w-4/5 items-center">
         <div className="relative text-6xl max-sm:text-2xl font-extrabold ">
           About Me
           <motion.div
@@ -52,7 +53,7 @@ const About = () => {
         </p>
       </div>
 
-      <div className="mt-10 mb-10 flex gap-4  max-md:flex-col w-4/5 max-sm:w-9/10 sm:text-md  ">
+      <div className="entry mt-10 mb-10 flex gap-4  max-md:flex-col w-4/5 max-sm:w-9/10 sm:text-md  ">
         <div className=" p-2 flex flex-col items-center rounded-xl border border-white/20 bg-white/5 backdrop-blur-md shadow-lg hover:scale-104 transition-transform duration-300">
           <p className="text-xl text-white mb-1">What sets me apart</p>
           <p className="text-sm text-gray-400 text-justify">
@@ -74,7 +75,7 @@ const About = () => {
       </div>
 
       {/* Technical Mastery */}
-      <div className="flex flex-col items-center mb-10 max-sm:w-9/10 ">
+      <div className="entry flex flex-col items-center mb-10 max-sm:w-9/10 ">
         <div className="text-6xl font-extrabold max-sm:text-2xl max-md:text-4xl relative w-fit p-1">
           Technical Mastery
           <motion.div
@@ -88,8 +89,8 @@ const About = () => {
           {Object.keys(skills).map((data, index) => {
             return (
               <React.Fragment key={index}>
-                <h1 className=" text-xl text-white max-sm:text-sm">{data}</h1>
-                <p className=" text-md text-gray-400 max-sm:text-sm">
+                <h1 className="entry text-xl text-white max-sm:text-sm">{data}</h1>
+                <p className="entry-text text-md text-gray-400 max-sm:text-sm">
                   {skills[data]}
                 </p>
               </React.Fragment>
@@ -99,7 +100,7 @@ const About = () => {
       </div>
 
       {/* core value */}
-      <div className="flex flex-col justify-center w-9/10  items-center  ">
+      <div className="entry flex flex-col justify-center w-9/10  items-center  ">
         <div className="text-6xl font-extrabold max-sm:text-2xl max-md:text-4xl relative w-fit p-1">
           Core Value
           <motion.div
@@ -112,7 +113,7 @@ const About = () => {
 
         <div className="flex flex-col lg:flex-row gap-4 w-full  mt-5 mb-10 ">
           {Object.keys(coreValue).map((data, index) => (
-            <div key={index} className="border border-white/20 bg-white/5 rounded-xl shadow-2xl backdrop-blur-md p-4 flex flex-col items-center hover:scale-104 transition-transform duration-300 ">
+            <div key={index} className="entry-core-value border border-white/20 bg-white/5 rounded-xl shadow-2xl backdrop-blur-md p-4 flex flex-col items-center hover:scale-104 transition-transform duration-300 ">
               <div className="flex items-center gap-2">
                 {coreValueIcon[data]}
 

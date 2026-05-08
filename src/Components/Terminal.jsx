@@ -53,7 +53,7 @@ const Terminal = () => {
     }
   };
   return (
-    <div className="flex justify-center w-full  ">
+    <div className="terminal-entry flex justify-center w-full  ">
       <div className="border-2 border-gray-400 flex flex-col h-[500px] rounded-2xl lg:w-3/4 w-9/10  bg-gray-900 mb-10 ">
         <div className="relative flex rounded-t-2xl  bg-gray-700 p-3 gap-3 items-center ">
           <motion.div
