@@ -121,12 +121,12 @@ const Active_Projects = ({ setActiveTab }) => {
                   ↗
                 </div>
               </div>
-              <div className="  grid grid-cols-[5%_95%] max-sm:gap-2">
+              <div className=" p-2 grid grid-cols-[5%_95%] max-sm:gap-2">
                 {data.summary.icons.map((icon, i) => {
                   return (
                     <React.Fragment key={i}>
-                      <div className="entry flex justify-center">{icon}</div>
-                      <div className="entry-text">{data.summary.text[i]}</div>
+                      <div className=" flex justify-center">{icon}</div>
+                      <div className="">{data.summary.text[i]}</div>
                     </React.Fragment>
                   );
                 })}

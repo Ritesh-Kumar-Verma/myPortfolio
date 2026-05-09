@@ -45,12 +45,12 @@ body {
 .entry-core-value{
   animation: apear linear;
   animation-timeline: view();
-  animation-range: entry 0  cover 30%;
+  animation-range: entry 0  entry 100%;
   
 }
-.entry-core-value:last-child{
+/* .entry-core-value:last-child{
   animation-range: entry 0 entry 100%;
-}
+} */
 
 
 @media (min-width : 1000px) {
