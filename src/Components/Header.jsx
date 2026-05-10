@@ -25,7 +25,7 @@ const Header = ({ activeTab , setActiveTab}) => {
       {headerItem.map((data, index) => {
         return (
           <h1 key={index}
-            className={` hover:text-[rgb(100,255,218)] cursor-pointer transform transition-transform hover:scale-130
+            className={` hover:text-[rgb(100,255,218)] transform transition-transform hover:scale-130
          text-sm        ${
                    activeTab == data
                      ? "scale-140 text-[rgb(100,255,218)]  "

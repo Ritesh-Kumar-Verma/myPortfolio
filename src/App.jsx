@@ -6,6 +6,7 @@ import Home from "./Components/Home";
 import Contact from "./Components/Contact";
 import { Route, Routes } from "react-router-dom";
 import Loading from "./Components/Loading";
+import AnimatedCursor from "./Components/AnimatedCursor";
 
 const App = () => {
   const [activeTab, setActiveTab] = useState("Home");
@@ -14,11 +15,13 @@ const App = () => {
 
   return (
     <>
+
       {progress < 100 ? (
         <Loading progress={progress} setProgress={setProgress} />
       ) : (
         <div className="">
           <CursorLight />
+          <AnimatedCursor/>
           <Header activeTab={activeTab} setActiveTab={setActiveTab} />
           <Routes>
             <Route path="/" element={<Home setActiveTab={setActiveTab} />} />
