@@ -1,13 +1,15 @@
 import React, { useEffect, useRef, useState } from "react";
 import { motion } from "framer-motion";
+import { terminalAPI } from "../api/api";
+import ChatLoading from "./Chat_Loading";
+
 const Terminal = () => {
   const [terminalText, setTerminalText] = useState("");
 
   const [terminalHistory, setTerminalHistory] = useState([
-    "Welcome to Ritesh's Interactive terminal!",
-    "Type 'help' to see available commands.",
-    "Try commands like 'about' , 'skills', or 'projects'",
+    "Welcome to My Portfolio Website"
   ]);
+  const [aiThinking , setAiThinking] = useState(false)
 
   const commands = {
     help: () => "Available commands: help, about, skills, projects, clear",
@@ -30,28 +32,30 @@ const Terminal = () => {
   const handleTerminal = (e) => {
     setTerminalText(e.target.value);
   };
-  const handleKeyDown = (e) => {
+  const handleKeyDown = async (e) => {
     if (e.key === "Enter") {
       const command = terminalText.trim().toLowerCase();
-      let output = "";
 
-      output = commands[command]
-        ? commands[command]()
-        : "Command Not Found!!!\nType 'help'";
-      if (command === "clear") {
+      if (command === "clear" || command === 'cls') {
         setTerminalHistory([
-          "Welcome to Ritesh's Interactive terminal!",
-          "Type 'help' to see available commands.",
-          "Try commands like 'about' , 'skills', or 'projects'",
+          "Welcome to Ritesh's AI Assistant!",
         ]);
         setTerminalText("");
         return;
       }
 
-      setTerminalHistory((p) => [...p, `guest@ritesh:~$ `, output]);
-      setTerminalText("");
+      setAiThinking(true)
+      const res = await terminalAPI.getQuery(command)
+      const  output = res.data.output.answer
+      setAiThinking(false)
+
+      setTerminalHistory((p) => [...p, `guest@ritesh:~$ ${terminalText}`, output]);
+      setTerminalText("")
+
     }
   };
+
+  
   return (
     <div className="terminal-entry flex justify-center w-full  ">
       <div className="border-2 border-gray-400 flex flex-col h-[500px] rounded-2xl lg:w-3/4 w-9/10  bg-gray-900 mb-10 ">
@@ -66,7 +70,7 @@ const Terminal = () => {
             }}
             className="absolute right-0 bottom-1/2 bg-gray-800 border-2 border-gray-400 rounded-full px-4 py-2 text-white "
           >
-            Terminal
+            AI Assistant
           </motion.div>
           <div className="w-3 h-3 bg-red-600 rounded-full "></div>
           <div className="w-3 h-3 bg-yellow-500 rounded-full "></div>
@@ -82,8 +86,8 @@ const Terminal = () => {
             // console.log(data);
             return (
               <p
-                key={index}
-                className={`${data == "guest@ritesh:~$" ? "text-green-600" : ""}`}
+              key={index}
+              className={`${data == "guest@ritesh:~$" ? "text-green-600" : ""}`}
               >
                 {data}
               </p>
@@ -93,35 +97,36 @@ const Terminal = () => {
           <div className="flex gap-2  ">
             <p className="relative text-green-600">
               guest@ritesh:~$
-              
+
             </p>
-  {/* Command Line */}
-  <div className="relative flex-1 flex items-center">
-    <input
-      type="text"
-      placeholder="Type a command..."
-      className="bg-transparent border-none focus:outline-none caret-transparent w-full z-10 text-gray-400 font-bold"
-      value={terminalText}
-      onChange={handleTerminal}
-      onKeyDown={handleKeyDown}
-      autoFocus
-    />
-    
-    {/* The Custom Cursor */}
-    {terminalText === "" && (
-      <motion.span
-        animate={{ opacity: [0, 1, 0] }}
-        transition={{
-          duration: 1, 
-          repeat: Infinity,
-          ease: "linear",
-        }}
-        className="absolute left-0 inline-block h-[1.2em] w-2 bg-green-500"
-        style={{ pointerEvents: 'none' }} 
-      />
-    )}
-</div>
+            {/* Command Line */}
+            <div className="relative flex-1 flex items-center">
+              <input
+                type="text"
+                placeholder="Type a command..."
+                className="bg-transparent border-none focus:outline-none caret-transparent w-full z-10 text-gray-400 font-bold"
+                value={terminalText}
+                onChange={handleTerminal}
+                onKeyDown={handleKeyDown}
+                autoFocus
+                />
+
+              {/* The Custom Cursor */}
+              {terminalText === "" && (
+                <motion.span
+                animate={{ opacity: [0, 1, 0] }}
+                transition={{
+                  duration: 1,
+                  repeat: Infinity,
+                  ease: "linear",
+                }}
+                className="absolute left-0 inline-block h-[1.2em] w-2 bg-green-500"
+                style={{ pointerEvents: 'none' }}
+                />
+              )}
+            </div>
           </div>
+          { aiThinking &&  <ChatLoading/>}
         </div>
       </div>
     </div>

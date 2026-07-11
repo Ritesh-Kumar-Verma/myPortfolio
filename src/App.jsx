@@ -20,7 +20,7 @@ const App = () => {
         <Loading progress={progress} setProgress={setProgress} />
       ) : (
         <div className="">
-          <CursorLight />
+          {/* <CursorLight /> */}
           <AnimatedCursor/>
           <Header activeTab={activeTab} setActiveTab={setActiveTab} />
           <Routes>

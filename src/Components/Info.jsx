@@ -83,11 +83,27 @@ const Info = () => {
           </motion.div>
         </div>
 
+
+
+
+        
+
         <div className=" mt-3 text-lg max-sm:text-sm text-gray-500">
           Full-stack developer specializing in React, JavaScript, Java Spring
           Boot and performance-focused web experiences. I turn product ideas and
           polished designs into fast, accessible interfaces.
         </div>
+
+
+
+
+
+
+
+
+
+
+
 
         <div className="text-white border-2 rounded-full mt-2 px-4 py-2 bg-blue-950 hover:scale-105 transition-transform duration-300">
           React.js • Java Spring Boot • Node.js
