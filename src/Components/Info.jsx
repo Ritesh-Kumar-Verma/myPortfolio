@@ -189,7 +189,7 @@ const Info = () => {
             />
           </a>
           <a
-            href="https://www.linkedin.com/in/ritesh-kumar-verma-512468244/"
+            href="https://www.linkedin.com/in/ritesh-kr-verma"
             target="_blank"
             rel="noopener noreferrer"
           >

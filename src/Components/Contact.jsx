@@ -41,7 +41,7 @@ const Contact = ({setActiveTab}) => {
           <div className="absolute left-1/2 -translate-x-1/2 hidden group-hover:block  ">Git</div>
         </a>
         <a className="relative group text-[#00ffff]"
-          href="https://www.linkedin.com/in/ritesh-kumar-verma-512468244/"
+          href="https://www.linkedin.com/in/ritesh-kr-verma/"
           target="_blank"
           rel="noopener noreferrer"
           >
