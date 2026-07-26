@@ -11,6 +11,8 @@ import aijob from "./AiJob.png"
 import mylogo from "./mylogo.png"
 import mylogo2 from "./mylogo2.png"
 import mylogo3 from "./mylogo3.png"
+import airesumeoptimizer from './airesumeoptimizer.png'
+
 
 export const assets = {
     mylogo3,
@@ -25,5 +27,7 @@ export const assets = {
     mapify,
     youtube,
     gmail,
-    react
+    react,
+    airesumeoptimizer
+    
 }

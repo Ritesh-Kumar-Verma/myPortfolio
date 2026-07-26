@@ -7,6 +7,12 @@ const Projects = ({ setActiveTab }) => {
   const projectList = [
     {
       status: "Live",
+      title: "AI_Resume_Optimizer",
+      tech: ["Python","Groq API","Streamlit", "PyPdf"],
+      link: "https://ai-resume-optimizer-rv.streamlit.app/",
+    },
+    {
+      status: "Live",
       title: "AI Job Search",
       tech: ["React.js", "Spring Boot","Gemini API","Adzuna API", "PostgreSQL", "Render"],
       link: "https://ritesh-kumar-verma.github.io/AI_Job_Search/",
